@@ -32,3 +32,29 @@
   }
 }
 
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+@mixin set-background($box-size) {
+  @for $i from 1 to 5 {
+    @if $box-size == "large" {
+      .box-large {
+        background: $background-color-1;
+      }
+    } @else if $box-size == "medium" {
+      .box-medium:nth-child(#{$i}) {
+        background: nth($background-colors, ($i + 1));
+      }
+    } @else if $box-size == "wide" {
+      .box-wide:nth-child(#{$i}n) {
+        background: nth($background-colors, ($i + 4));
+      }
+    } @else if $box-size == "small" {
+      .box-small:nth-child(#{$i}n + 1) {
+        background: nth($background-colors, ($i + 3));
+      }
+    }
+  }
+}

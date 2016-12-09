@@ -38,14 +38,7 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
-
-
-
-
-/// Container's maximum width
-/// @type Length
-$max-width: 1180px !default;
-
+$vertical-gutter: 1em;
 
 
 
@@ -59,13 +52,20 @@ $breakpoints: (
   'large': 1024px,
 ) !default;
 
-
-
-
-
-
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+$background-color-1: #30665e;
+$background-color-2: #60486d;
+$background-color-3: #a124a5;
+$background-color-4: #244ba5;
+$background-color-5: #3d4e4f;
+$background-color-6: #377244;
+$background-color-7: #303666;
+$background-color-8: #2d0363;
+
+
+$background-colors: ($background-color-1, $background-color-2, $background-color-3, $background-color-4, $background-color-5, $background-color-6, $background-color-7, $background-color-8);

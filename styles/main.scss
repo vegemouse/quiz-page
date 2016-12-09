@@ -25,4 +25,62 @@
 @import
   'themes/default';
 
-  
+// Main Content
+
+body {
+  background: $dark-grey;
+}
+
+.container {
+  @include outer-container;
+  padding: 2em 0.5em;
+}
+
+@include set-background(large);
+@include set-background(medium);
+@include set-background(wide);
+@include set-background(small);
+
+.box-large {
+  @include span-columns(8);
+  height: 20em;
+  @media screen and (max-width: 768px) {
+    @include span-columns(12);
+  }
+}
+
+.box-medium {
+  @include span-columns(4);
+  @include omega(2);
+  height: 9.5em;
+  &:nth-child(3) {
+    margin-top: $vertical-gutter;
+  }
+  @media screen and (max-width: 768px) {
+    @include span-columns(6);
+    @include omega-reset(2n);
+    margin-top: $vertical-gutter;
+  }
+  @media screen and (max-width: 450px) {
+    @include span-columns(12);
+  }
+}
+
+.box-wide {
+  @include span-columns(4);
+  height: 7em;
+  margin-top: $vertical-gutter;
+  @media screen and (max-width: 450px) {
+    @include span-columns(12);
+  }
+}
+
+.box-small {
+  @include span-columns(3);
+  height: 10em;
+  margin-top: $vertical-gutter;
+  @media screen and (max-width: 768px) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+}
