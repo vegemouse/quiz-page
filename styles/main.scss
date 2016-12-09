@@ -36,6 +36,13 @@ body {
   padding: 2em 0.5em;
 }
 
+.box {
+  &-large, &-medium, &-wide, &-small {
+    padding: 10px;
+  }
+}
+
+
 @include set-background(large);
 @include set-background(medium);
 @include set-background(wide);
@@ -43,15 +50,43 @@ body {
 
 .box-large {
   @include span-columns(8);
+  position: relative;
   height: 20em;
   @media screen and (max-width: 768px) {
     @include span-columns(12);
+  }
+  img {
+    float: left;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border: 3px solid $light-grey;
+  }
+  &::after {
+    content: "";
+    background: url("../img/mtg.jpg");
+    background-size: cover;
+    opacity: 0.7;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  .box-content {
+    float: right;
+    height: 100%;
+    width: 50%;
+    padding: 1.5em 1em;
+    text-align: center;
   }
 }
 
 .box-medium {
   @include span-columns(4);
   @include omega(2);
+  position: relative;
   height: 9.5em;
   &:nth-child(3) {
     margin-top: $vertical-gutter;
@@ -61,17 +96,64 @@ body {
     @include omega-reset(2n);
     margin-top: $vertical-gutter;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 550px) {
     @include span-columns(12);
   }
+  img {
+    float: left;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border: 3px solid $light-grey;
+  }
+  .box-content {
+    float: right;
+    height: 100%;
+    width: 50%;
+    padding: 0.25em;
+    text-align: center;
+  }
+}
+
+.got::after {
+  content: "";
+  background: url("../img/got.jpg");
+  background-size: cover;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.lacroix::after {
+  content: "";
+  background: url("../img/lacroix.jpg");
+  background-size: cover;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .box-wide {
   @include span-columns(4);
   height: 7em;
   margin-top: $vertical-gutter;
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 550px) {
     @include span-columns(12);
+  }
+  .box-content {
+    float: right;
+    height: 100%;
+    width: 50%;
+    padding: 0.25em;
+    text-align: center;
   }
 }
 

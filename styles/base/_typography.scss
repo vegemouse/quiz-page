@@ -2,6 +2,35 @@
  * Basic typography style for copy text
  */
 body {
-  color: $text-color;
+  color: $light-grey;
   font: normal 125% / 1.4 $text-font-stack;
+}
+
+.box-large {
+  h2 {
+    display: inline-block;
+    margin: 0;
+    font-size: 29px;
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+    @media (max-width: 550px) {
+      font-size: 22px;
+    }
+  }
+}
+
+.box-medium {
+  h2 {
+    display: inline-block;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    @media (max-width: 550px) {
+      font-size: 18px;
+    }
+  }
+  a {
+    font-size: 0.7em;
+  }
+
 }

@@ -58,14 +58,14 @@ $breakpoints: (
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
 
-$background-color-1: #30665e;
-$background-color-2: #60486d;
-$background-color-3: #a124a5;
-$background-color-4: #244ba5;
-$background-color-5: #3d4e4f;
-$background-color-6: #377244;
-$background-color-7: #303666;
-$background-color-8: #2d0363;
+$background-color-1: rgba(48, 102, 94, 0.8);
+$background-color-2: rgba(96, 72, 109, 0.8);
+$background-color-3: rgba(161, 36, 165, 0.8);
+$background-color-4: rgba(36, 75, 165, 0.8);
+$background-color-5: rgba(61, 78, 79, 0.8);
+$background-color-6: rgba(55, 114, 68, 0.8);
+$background-color-7: rgba(48, 54, 102, 0.8);
+$background-color-8: #rgba(45, 3, 99, 0.8);
 
 
 $background-colors: ($background-color-1, $background-color-2, $background-color-3, $background-color-4, $background-color-5, $background-color-6, $background-color-7, $background-color-8);
