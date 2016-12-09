@@ -446,7 +446,8 @@ h2 {
 
 .box-medium h2 {
   display: inline-block;
-  margin: 0 0 15px 0;
+  margin: 0;
+  margin-bottom: 3px;
   font-size: 18px; }
   @media (max-width: 570px) {
     .box-medium h2 {
@@ -456,7 +457,8 @@ h2 {
 
 .box-wide h2 {
   display: inline-block;
-  margin: 0 0 15px 0;
+  margin: 0;
+  margin-bottom: 3px;
   font-size: 18px; }
   @media (max-width: 768px) {
     .box-wide h2 {
@@ -608,6 +610,16 @@ body {
 .box-wide:nth-child(4n) {
   background: #rgba 45, 3, 99, 0.8; }
 
+.box-content {
+  position: relative; }
+  .box-content .box-items {
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
 .box-large {
   float: left;
   display: block;
@@ -646,7 +658,6 @@ body {
     float: right;
     height: 100%;
     width: 50%;
-    padding: 1.5em 1em;
     text-align: center; }
 
 .box-medium {
@@ -693,7 +704,6 @@ body {
     float: right;
     height: 100%;
     width: 50%;
-    padding: 0.25em;
     text-align: center; }
 
 .box-wide {
@@ -723,7 +733,6 @@ body {
   .box-wide .box-content {
     float: right;
     height: 100%;
-    padding: 2px;
     width: 50%;
     text-align: center; }
 
