@@ -51,10 +51,6 @@
       .box-wide:nth-child(#{$i}n) {
         background: nth($background-colors, ($i + 4));
       }
-    } @else if $box-size == "small" {
-      .box-small:nth-child(#{$i}n + 1) {
-        background: nth($background-colors, ($i + 3));
-      }
     }
   }
 }

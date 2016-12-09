@@ -437,7 +437,7 @@ body {
   @media (max-width: 768px) {
     .box-large h2 {
       font-size: 30px; } }
-  @media (max-width: 550px) {
+  @media (max-width: 570px) {
     .box-large h2 {
       font-size: 22px; } }
 
@@ -445,11 +445,27 @@ body {
   display: inline-block;
   margin: 0 0 15px 0;
   font-size: 18px; }
-  @media (max-width: 550px) {
+  @media (max-width: 570px) {
     .box-medium h2 {
       font-size: 18px; } }
 .box-medium a {
   font-size: 0.7em; }
+
+.box-wide h2 {
+  display: inline-block;
+  margin: 0 0 15px 0;
+  font-size: 18px; }
+  @media (max-width: 768px) {
+    .box-wide h2 {
+      font-size: 12px; } }
+  @media (max-width: 570px) {
+    .box-wide h2 {
+      font-size: 18px; } }
+.box-wide a {
+  font-size: 10px; }
+  @media (max-width: 570px) {
+    .box-wide a {
+      font-size: 12px; } }
 
 /**
  * Clear inner floats
@@ -520,11 +536,14 @@ body {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  padding: 2em 0.5em; }
+  padding: 10vh 0; }
   .container::after {
     clear: both;
     content: "";
     display: block; }
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 0; } }
 
 .box-large, .box-medium, .box-wide, .box-small {
   padding: 10px; }
@@ -564,18 +583,6 @@ body {
 
 .box-wide:nth-child(4n) {
   background: #rgba 45, 3, 99, 0.8; }
-
-.box-small:nth-child(1n + 1) {
-  background: rgba(36, 75, 165, 0.8); }
-
-.box-small:nth-child(2n + 1) {
-  background: rgba(61, 78, 79, 0.8); }
-
-.box-small:nth-child(3n + 1) {
-  background: rgba(55, 114, 68, 0.8); }
-
-.box-small:nth-child(4n + 1) {
-  background: rgba(48, 54, 102, 0.8); }
 
 .box-large {
   float: left;
@@ -644,7 +651,7 @@ body {
         margin-right: 2.35765%; }
       .box-medium:nth-child(2n+1) {
         clear: none; } }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 570px) {
     .box-medium {
       float: left;
       display: block;
@@ -689,16 +696,53 @@ body {
   position: absolute;
   z-index: -1; }
 
+.dog::after {
+  content: "";
+  background: url("../img/dog.jpg");
+  background-size: cover;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
+.potter::after {
+  content: "";
+  background: url("../img/potter.jpg");
+  background-size: cover;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
+.sanrio::after {
+  content: "";
+  background: url("../img/sanrio.jpg");
+  background-size: cover;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
 .box-wide {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
   height: 7em;
+  position: relative;
   margin-top: 1em; }
   .box-wide:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 570px) {
     .box-wide {
       float: left;
       display: block;
@@ -706,33 +750,17 @@ body {
       width: 100%; }
       .box-wide:last-child {
         margin-right: 0; } }
+  .box-wide img {
+    float: left;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border: 3px solid #ededed; }
   .box-wide .box-content {
     float: right;
     height: 100%;
+    padding: 2px;
     width: 50%;
-    padding: 0.25em;
     text-align: center; }
-
-.box-small {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  height: 10em;
-  margin-top: 1em; }
-  .box-small:last-child {
-    margin-right: 0; }
-  @media screen and (max-width: 768px) {
-    .box-small {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      .box-small:last-child {
-        margin-right: 0; }
-      .box-small:nth-child(2n) {
-        margin-right: 0; }
-      .box-small:nth-child(2n+1) {
-        clear: left; } }
 
 /*# sourceMappingURL=main.css.map */

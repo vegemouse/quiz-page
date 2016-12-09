@@ -33,7 +33,10 @@ body {
 
 .container {
   @include outer-container;
-  padding: 2em 0.5em;
+  padding: 10vh 0;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 .box {
@@ -96,7 +99,7 @@ body {
     @include omega-reset(2n);
     margin-top: $vertical-gutter;
   }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 570px) {
     @include span-columns(12);
   }
   img {
@@ -115,54 +118,41 @@ body {
   }
 }
 
-.got::after {
-  content: "";
-  background: url("../img/got.jpg");
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-.lacroix::after {
-  content: "";
-  background: url("../img/lacroix.jpg");
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+@each $class in got, lacroix, dog, potter, sanrio {
+  .#{$class}::after {
+    content: "";
+    background: url("../img/#{$class}.jpg");
+    background-size: cover;
+    opacity: 0.7;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 .box-wide {
   @include span-columns(4);
   height: 7em;
+  position: relative;
   margin-top: $vertical-gutter;
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 570px) {
     @include span-columns(12);
+  }
+  img {
+    float: left;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border: 3px solid $light-grey;
   }
   .box-content {
     float: right;
     height: 100%;
+    padding: 2px;
     width: 50%;
-    padding: 0.25em;
     text-align: center;
-  }
-}
-
-.box-small {
-  @include span-columns(3);
-  height: 10em;
-  margin-top: $vertical-gutter;
-  @media screen and (max-width: 768px) {
-    @include span-columns(6);
-    @include omega(2n);
   }
 }
