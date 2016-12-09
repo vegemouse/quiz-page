@@ -430,6 +430,9 @@ body {
   color: #ededed;
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
+h2 {
+  font-weight: 500; }
+
 .box-large h2 {
   display: inline-block;
   margin: 0;
@@ -522,21 +525,30 @@ body {
   position: absolute;
   width: 1px; }
 
+footer {
+  width: 100vw;
+  text-align: center;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  padding: 5px;
+  font-size: 0.75em; }
+
 .button {
   border: 2px solid #ededed;
-  padding: 3% 5%;
-  border-radius: 10px; }
+  padding: 3% 5%; }
   .button:hover {
     background-color: #ededed; }
 
 body {
-  background: #444444; }
+  background: #444444;
+  padding-bottom: 6vh; }
 
 .container {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  padding: 10vh 0; }
+  padding: 1vh 0; }
   .container::after {
     clear: both;
     content: "";
@@ -544,6 +556,18 @@ body {
   @media screen and (max-width: 768px) {
     .container {
       padding: 0; } }
+
+.title {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center;
+  font-size: 5em;
+  font-style: italic;
+  text-shadow: 8px 5px #1e1e1e; }
+  .title:last-child {
+    margin-right: 0; }
 
 .box-large, .box-medium, .box-wide, .box-small {
   padding: 10px; }
@@ -672,66 +696,6 @@ body {
     padding: 0.25em;
     text-align: center; }
 
-.got::after {
-  content: "";
-  background: url("../img/got.jpg");
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1; }
-
-.lacroix::after {
-  content: "";
-  background: url("../img/lacroix.jpg");
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1; }
-
-.dog::after {
-  content: "";
-  background: url("../img/dog.jpg");
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1; }
-
-.potter::after {
-  content: "";
-  background: url("../img/potter.jpg");
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1; }
-
-.sanrio::after {
-  content: "";
-  background: url("../img/sanrio.jpg");
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1; }
-
 .box-wide {
   float: left;
   display: block;
@@ -762,5 +726,70 @@ body {
     padding: 2px;
     width: 50%;
     text-align: center; }
+
+.got::after {
+  content: "";
+  background: url("../img/got.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
+.lacroix::after {
+  content: "";
+  background: url("../img/lacroix.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
+.dog::after {
+  content: "";
+  background: url("../img/dog.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
+.potter::after {
+  content: "";
+  background: url("../img/potter.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
+.sanrio::after {
+  content: "";
+  background: url("../img/sanrio.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
 
 /*# sourceMappingURL=main.css.map */

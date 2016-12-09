@@ -29,14 +29,23 @@
 
 body {
   background: $dark-grey;
+  padding-bottom: 6vh;
 }
 
 .container {
   @include outer-container;
-  padding: 10vh 0;
+  padding: 1vh 0;
   @media screen and (max-width: 768px) {
     padding: 0;
   }
+}
+
+.title {
+  @include span-columns(12);
+  text-align: center;
+  font-size: 5em;
+  font-style: italic;
+  text-shadow: 8px 5px darken($dark-grey, 15%);
 }
 
 .box {
@@ -44,7 +53,6 @@ body {
     padding: 10px;
   }
 }
-
 
 @include set-background(large);
 @include set-background(medium);
@@ -118,21 +126,6 @@ body {
   }
 }
 
-@each $class in got, lacroix, dog, potter, sanrio {
-  .#{$class}::after {
-    content: "";
-    background: url("../img/#{$class}.jpg");
-    background-size: cover;
-    opacity: 0.7;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-  }
-}
-
 .box-wide {
   @include span-columns(4);
   height: 7em;
@@ -154,5 +147,21 @@ body {
     padding: 2px;
     width: 50%;
     text-align: center;
+  }
+}
+
+@each $class in got, lacroix, dog, potter, sanrio {
+  .#{$class}::after {
+    content: "";
+    background: url("../img/#{$class}.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
   }
 }
