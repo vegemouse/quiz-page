@@ -4,6 +4,8 @@
 
 ### 12/09/2016
 
+![Screenshot](screenshot.png)
+
 ## Project Description
 
 Create a responsive layout of cards with varying colors and transparent background images. It should be responsive at at least one breakpoint.
