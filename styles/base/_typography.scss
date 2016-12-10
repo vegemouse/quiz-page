@@ -6,6 +6,12 @@ body {
   font: normal 125% / 1.4 $text-font-stack;
 }
 
+.title {
+  text-align: center;
+  font-size: 3em;
+  font-style: italic;
+}
+
 h2 {
   font-weight: 500;
 }
@@ -43,7 +49,7 @@ h2 {
   h2 {
     display: inline-block;
     margin: 0;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
     font-size: 18px;
     @media (max-width: 768px) {
       font-size: 12px;
@@ -53,7 +59,7 @@ h2 {
     }
   }
   a {
-    font-size: 10px;
+    font-size: 12px;
     @media (max-width: 570px) {
       font-size: 12px;
     }
