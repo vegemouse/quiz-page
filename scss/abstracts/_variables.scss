@@ -1,0 +1,71 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+$dark-blue: #041633;
+
+$vertical-gutter: 1em;
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+$background-color-1: rgba(48, 102, 94, 0.8);
+$background-color-2: rgba(96, 72, 109, 0.8);
+$background-color-3: rgba(161, 36, 165, 0.8);
+$background-color-4: rgba(36, 75, 165, 0.8);
+$background-color-5: rgba(61, 78, 79, 0.8);
+$background-color-6: rgba(55, 114, 68, 0.8);
+$background-color-7: rgba(48, 54, 102, 0.8);
+$background-color-8: #rgba(45, 3, 99, 0.8);
+
+
+$background-colors: ($background-color-1, $background-color-2, $background-color-3, $background-color-4, $background-color-5, $background-color-6, $background-color-7, $background-color-8);

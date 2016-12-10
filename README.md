@@ -16,6 +16,6 @@ Sass, Bourbon, Neat
 
 No Setup needed. You can view the page at http://vegemouse.github.io/quiz-page
 
-License Info
+## License Info
 
 GPL 2016

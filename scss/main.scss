@@ -1,0 +1,171 @@
+@charset 'UTF-8';
+
+@import "abstracts/index";
+@import "vendor/index";
+@import "base/index";
+@import "layout/index";
+@import "components/index";
+
+// Main Content
+
+body {
+  background: $dark-blue;
+  position: relative;
+}
+
+.container {
+  @include outer-container;
+  @media screen and (min-width: 836px) {
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+  }
+  @media screen and (max-width: 835px) {
+    padding: 8vh 0;
+  }
+  @media screen and (max-width: 570px) {
+    padding: 5vh 0;
+  }
+}
+
+.box {
+  &-large, &-medium, &-wide, &-small {
+    padding: 10px;
+    &:after {
+      transition: opacity 200ms;
+    }
+    &:hover {
+      cursor: pointer;
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@include set-background(large);
+@include set-background(medium);
+@include set-background(wide);
+@include set-background(small);
+
+.box-content {
+  position: relative;
+  .box-items {
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.box-large {
+  @include span-columns(8);
+  position: relative;
+  height: 20em;
+  @media screen and (max-width: 835px) {
+    @include span-columns(12);
+  }
+  img {
+    float: left;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border: 2px solid $light-grey;
+  }
+  &::after {
+    content: "";
+    background: url("../img/mtg.jpg");
+    background-size: cover;
+    opacity: 0.7;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  .box-content {
+    float: right;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+.box-medium {
+  @include span-columns(4);
+  @include omega(2);
+  position: relative;
+  height: 9.5em;
+  &:nth-child(3) {
+    margin-top: $vertical-gutter;
+  }
+  @media screen and (max-width: 835px) {
+    @include span-columns(6);
+    @include omega-reset(2n);
+    margin-top: $vertical-gutter;
+  }
+  @media screen and (max-width: 570px) {
+    @include span-columns(12);
+    margin: 0;
+    &:nth-child(3) {
+      margin: 0;
+    }
+  }
+  img {
+    float: left;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border: 2px solid $light-grey;
+  }
+  .box-content {
+    float: right;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+.box-wide {
+  @include span-columns(4);
+  height: 7em;
+  position: relative;
+  margin-top: $vertical-gutter;
+  @media screen and (max-width: 570px) {
+    @include span-columns(12);
+    margin: 0;
+  }
+  img {
+    float: left;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border: 2px solid $light-grey;
+  }
+  .box-content {
+    float: right;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@each $class in got, lacroix, dog, potter, sanrio {
+  .#{$class}::after {
+    content: "";
+    background: url("../img/#{$class}.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+}

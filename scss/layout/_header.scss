@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+
+.title {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 5vh;
+  padding-top: 0.5vh;
+  background: black;
+  width: 100vw;
+  z-index: 5;
+}
