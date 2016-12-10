@@ -568,14 +568,17 @@ body {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 10px; }
   .title:last-child {
     margin-right: 0; }
 
 .box-large, .box-medium, .box-wide, .box-small {
   padding: 10px; }
+  .box-large:after, .box-medium:after, .box-wide:after, .box-small:after {
+    transition: opacity 200ms; }
   .box-large:hover, .box-medium:hover, .box-wide:hover, .box-small:hover {
-    transform: scale(110%); }
+    cursor: pointer; }
     .box-large:hover:after, .box-medium:hover:after, .box-wide:hover:after, .box-small:hover:after {
       opacity: 0; }
 
